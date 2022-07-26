@@ -1,0 +1,14 @@
+>use restaurant
+>db.createCollection(resto)
+>db.resto.insert({"name" : "swiggy", "address" : { "building" : 20, "street" : "30th", "area" :
+"basavanagudi", "pincode" : 560010 }, "id" : 111, "cuisine" : "north", "nearby" : "govt school",
+"online_delivery" : "yes", "famous_for" : "jamoon" })
+
+>db.resto.save(i)
+
+// 1st query
+> db.resto.find({"address.area":"basavanagudi","cuisine":"north"},{name:1,address:1})
+
+// 2nd query
+>db.resto.find({"address.area":"basavanagudi","cuisine":"north","famous_for":"indian
+thali"},{name:1,address:1,nearby:1})
