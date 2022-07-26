@@ -1,0 +1,12 @@
+>use tourist
+>db.createCollection(touristplaces)
+>db.touristplaces.insert({"place" : "Bangalore", "address" : { "state" : “karnataka”}, "id" : “blr”,
+"tourist_attraction" : "vidhana soudha", "best_time_to_visit" : "winter", "nearby_transport_mode" :
+{“airport”: “KIA”, “bus_stand”: “majestic”, “metrostn”: “vidhanasoudha”}, “accomodation”:
+“hotels”, “food_not_to_miss”: “DOSA”})
+>db.resto.save(i)
+
+//1st 
+> db.resto.find({"address.state":"karnataka"},{places:1})
+//2nd
+> db.resto.find().sort({address.state:1})
