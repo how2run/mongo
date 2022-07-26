@@ -1,0 +1,11 @@
+>use moviedb
+>db.createCollection(movies)
+>db.movies.insert({"Actor_name" : "john", "Actor_id" : 123, "Actor_birthdate" : 20/12/1990,
+"Director_name" :“krish”, “Director_id”:111,“Director_birthdate”: 02/02/1980, “film_title”: “dia”,
+“year_of_production”:2018, “type”: “comedy”})
+>db.movies.save(i)
+
+//1st
+> db.movies.find({"Actor_name" : "john",“year_of_production”:2018})
+//2nd
+> db.movies.find({"Director_name" :“ram”},{Actor_name:1,type:1})
